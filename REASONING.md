@@ -45,7 +45,7 @@ Write one to three sentences here. Name the rule that fixes each field.
 ## P04
 
 = is unification, not arithmetic or assignment. The first goal unifies X with the compound term f(Y, a), leaving Y unbound inside it; the second goal then binds Y = b, which retroactively fills the hole in X, making X = f(b, a).
-
+Correction: Correct format for the output is X=f(b,a),Y=b
 ## P05
 
 Write one to three sentences here. Name the rule that fixes each field.
@@ -60,7 +60,7 @@ Write one to three sentences here. Name the rule that fixes each field.
 
 ## P08
 
-The base clause is listed first: ancestor(A,D) :- parent(A,D). So Prolog first answers with tom's direct children in fact order — parent(tom, liz) then parent(tom, bob) — giving X=liz first and X=bob second. Only after the base clause is exhausted does the recursive clause descend, adding ann, pat, sue, and jim, for six descendants total.
+The base clause is listed first: ancestor(A,D) :- parent(A,D). So Prolog first answers with tom's direct children in fact order — parent(tom, liz) then parent(tom, bob), giving X=liz first and X=bob second. Only after the base clause is exhausted does the recursive clause descend, adding ann, pat, sue, and jim, for six descendants total.
 
 ## P09
 
@@ -69,7 +69,7 @@ Write one to three sentences here. Name the rule that fixes each field.
 ## P10
 
 The base clause is first: parent(X, jim) matches only parent(pat, jim), so X=pat is the first answer.
-
+Correction: the recursive clause continues upward from jim through pat, bob, and tom, giving three answers.
 ## P11
 
 Write one to three sentences here. Name the rule that fixes each field.
@@ -77,7 +77,7 @@ Write one to three sentences here. Name the rule that fixes each field.
 ## P12
 
 reach_r/2 lists the base clause first, so I checked edge(a, d) first. I saw that no edge(a, d) fact exists in the graph and concluded the query would simply return false. 
-
+Correction: when edge(a,d) fails, the recursive clause fires, reads one edge at a time, and finds the path a→b→c→d, so the first answer is true; backtracking then loops the cycle and keeps finding true, making the count unbounded.
 ## P13
 
 Write one to three sentences here. Name the rule that fixes each field.
