@@ -1,6 +1,10 @@
 <!--no-pdf-->
 # CMSC 124 Problem Set 4 Starter
 
+#### Members:
+- John Benedict B. Aparicio (erratic-behaviour)
+- Ethan Sean T. Gapulan (Ethanerz)
+
 This repository holds the Prolog prediction corpus and the rule stubs for
 Problem Set 4. The assignment manual defines the work and the submission rules.
 
